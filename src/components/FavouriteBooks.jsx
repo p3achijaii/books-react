@@ -1,5 +1,4 @@
 import BookCard from "./BookCard";
-import List from "./BookCard";
 
 function FavouriteBooks({
   favouriteBooks,
@@ -27,6 +26,7 @@ function FavouriteBooks({
               key={book.title}
               book={book}
               onAddToCart={onAddToCart}
+              onRemoveFavourite={removeFavourite}
               showRemove={true}
             />
           ))}
