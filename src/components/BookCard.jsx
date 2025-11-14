@@ -7,7 +7,7 @@ function BookCard({
   draggable = true,
   isFavourited = false,
 }) {
-  const handleDragStrat = (e) => {
+  const handleDragStart = (e) => {
     if (draggable) {
       e.dataTransfer.setData("application/json", JSON.stringify(book));
     }
@@ -17,7 +17,7 @@ function BookCard({
     <div
       className="book-card"
       draggable={draggable}
-      onDragStart={handleDragStrat}
+      onDragStart={handleDragStart}
     >
       <img
         src={book.image}
