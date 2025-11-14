@@ -34,7 +34,13 @@ function Books({searchTerm}) {
       
       <h2>Books List</h2>
       <List
-      
+      item = {filteredBooks}
+      renderItem = {book => (
+        <>
+        <strong>{book.title}</strong> = {book.author}
+        <button onClick = {() => onFavourite(book)}>Add to favourite</button>
+        </>
+      )}
       />
     
     </div>
