@@ -7,9 +7,9 @@ import FavouriteBooks from './components/FavouriteBooks'
 import Cart from './components/Cart'
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [favouriteBooks, setFavouriteBooks] = useState([])
-  const [cartItems, setCartItems] = useState([])
+  const [searchTerm, setSearchTerm] = useState('');
+  const [favouriteBooks, setFavouriteBooks] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   const addFavourite = book => {
     if(!favouriteBooks.some(b => b.title === book.title)){
