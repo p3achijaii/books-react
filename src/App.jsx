@@ -50,14 +50,14 @@ function App() {
       if (!existingItem) return currentItems;
 
       if (removeAll || existingItem.quantity === 1) {
-        return currentItems.filter((item) => item.book.title === bookTitle);
-      } else {
-        return currentItems.map((item) =>
-          item.book.title === bookTitle
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        );
+        return currentItems.filter((item) => item.book.title !== bookTitle);
       }
+
+      return currentItems.map((item) =>
+        item.book.title === bookTitle
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      );
     });
   };
 
