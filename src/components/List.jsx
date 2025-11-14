@@ -1,14 +1,13 @@
-function List({items, renderItem, emptyMessage = "No items found"}) {
+function List({ items, renderItem, emptyMessage = "No items found" }) {
+  if (!items.length) return <p>{emptyMessage}</p>;
 
-    if(!items.length) return <p>{emptyMessage}</p>
-
-    return (
-        <div>
-            {items.map((item, index) => (
-                <div key = {index} > {renderItem(item)}</div>
-            ))}
-        </div>
-    )
+  return (
+    <div>
+      {items.map((item, index) => (
+        <div key={index}> {renderItem(item)}</div>
+      ))}
+    </div>
+  );
 }
 
-export default List
+export default List;

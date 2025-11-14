@@ -1,24 +1,22 @@
-import List from './List'
+import List from "./List";
 
-function FavouriteBooks({favouriteBooks, removeFavourite}) {
-    return (
-        <>
+function FavouriteBooks({ favouriteBooks, removeFavourite }) {
+  return (
+    <>
+      <h2>Favourite Books</h2>
 
-        <h2>Favourite Books</h2>
-
-        <List
-        items = {favouriteBooks}
-        emptyMessage = 'You have no favourite books yet'
-        renderItem={book => (
-            <>
+      <List
+        items={favouriteBooks}
+        emptyMessage="You have no favourite books yet"
+        renderItem={(book) => (
+          <>
             <strong>{book.title}</strong>
-            <button onClick = {() => removeFavourite(book)}> Remove</button>
-            </>
+            <button onClick={() => removeFavourite(book)}> Remove</button>
+          </>
         )}
-        />
-
-        </>
-    )
+      />
+    </>
+  );
 }
 
-export default FavouriteBooks
+export default FavouriteBooks;
