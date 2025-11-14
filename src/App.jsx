@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import "./App.css";
 import SearchBox from "./components/SearchBox";
 import Books from "./components/Books";
 import FavouriteBooks from "./components/FavouriteBooks";
 import Cart from "./components/Cart";
+import "./App.css";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
