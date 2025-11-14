@@ -20,3 +20,5 @@ function FavouriteBooks({favouriteBooks, removeFavourite}) {
         </>
     )
 }
+
+export default FavouriteBooks
