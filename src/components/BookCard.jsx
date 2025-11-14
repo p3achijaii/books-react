@@ -57,3 +57,5 @@ function BookCard({
     </div>
   );
 }
+
+export default BookCard
