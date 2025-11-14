@@ -21,13 +21,17 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       
       <h1>Book Finder</h1>
+      
       <SearchBox searchTerm = {searchTerm} setSearchTerm = {setSearchTerm} />
-      <Books searchTerm = {searchTerm}/>
-    
-    </>
+      <Books searchTerm = {searchTerm} onFavourite = {addFavourite}/>
+      <favouriteBooks
+      favouriteBooks = {favouriteBooks}
+      removeFavourite = {removeFavourite}
+      />
+    </div>
   )
 }
 
