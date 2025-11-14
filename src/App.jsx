@@ -24,10 +24,10 @@ function App() {
     <div>
       
       <h1>Book Finder</h1>
-      
+
       <SearchBox searchTerm = {searchTerm} setSearchTerm = {setSearchTerm} />
       <Books searchTerm = {searchTerm} onFavourite = {addFavourite}/>
-      <favouriteBooks
+      <FavouriteBooks
       favouriteBooks = {favouriteBooks}
       removeFavourite = {removeFavourite}
       />
