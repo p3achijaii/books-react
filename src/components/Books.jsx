@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import List from './List'
 
-function Books({searchTerm}) {
+function Books({searchTerm, onFavourite}) {
     const [books, setBooks] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -34,7 +34,7 @@ function Books({searchTerm}) {
       
       <h2>Books List</h2>
       <List
-      item = {filteredBooks}
+      items = {filteredBooks}
       renderItem = {book => (
         <>
         <strong>{book.title}</strong> = {book.author}
